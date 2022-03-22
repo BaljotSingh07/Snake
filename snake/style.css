@@ -1,0 +1,46 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    border: solid 1px black;
+    grid-area: 1 / 2 / 1 / 2;
+    gap: 1px;
+    padding: 1px;
+}
+
+main > div{
+    padding-bottom: 98.6%;
+}
+
+#scoreDiv{
+    justify-self: end;
+}
+
+#gameOver{
+    grid-area: 1 / 2 / 1 / 2;
+    justify-self: center;
+    align-self: center;
+    background-color: rgba(238, 238, 238, 0.938);
+    padding: 20px;
+    width: 90%;
+    display: none;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 10fr 1fr;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+    }
+}
